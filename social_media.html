@@ -1,0 +1,710 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Follow Life Unfiltered on all social media platforms. Connect with us on Instagram, YouTube, Facebook, LinkedIn, Telegram and TikTok.">
+
+    <title>Social Media |  Unfiltered Dreams</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255, 77, 109, 0.10), transparent 30%),
+                radial-gradient(circle at 90% 80%, rgba(91, 76, 255, 0.10), transparent 30%),
+                #faf9f6;
+            color: #171717;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            padding: 22px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(250, 249, 246, 0.88);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #f7307c;
+        }
+
+        .back-home {
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: #171717;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            text-align: center;
+            padding: 95px 20px 60px;
+        }
+
+        .small-title {
+            display: inline-block;
+            padding: 8px 17px;
+            border-radius: 50px;
+            background: #171717;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 7vw, 82px);
+            line-height: 0.95;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #f32991;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #666;
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           SOCIAL GRID
+        ========================= */
+
+        .social-container {
+            width: min(1100px, 90%);
+            margin: 20px auto 100px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .social-card {
+            position: relative;
+            padding: 35px 30px;
+            min-height: 230px;
+
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            border-radius: 25px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .social-card::before {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+
+            right: -70px;
+            top: -70px;
+
+            background: rgba(0, 0, 0, 0.04);
+            transition: 0.5s ease;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.10);
+        }
+
+        .social-card:hover::before {
+            transform: scale(2);
+        }
+
+        .social-icon {
+            width: 62px;
+            height: 62px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            font-size: 27px;
+
+            background: #171717;
+            color: white;
+
+            transition: 0.4s ease;
+        }
+
+        .social-card:hover .social-icon {
+            transform: rotate(-8deg) scale(1.08);
+        }
+
+        .social-card h2 {
+            font-size: 22px;
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+        .social-card p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .follow-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            margin-top: 22px;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .follow-btn i {
+            transition: 0.3s ease;
+        }
+
+        .social-card:hover .follow-btn i {
+            transform: translateX(6px);
+        }
+
+        /* =========================
+           PLATFORM COLORS
+        ========================= */
+
+        .instagram .social-icon {
+            background: linear-gradient(
+                135deg,
+                #833ab4,
+                #fd1d1d,
+                #fcb045
+            );
+        }
+
+        .youtube .social-icon {
+            background: #ff0000;
+        }
+
+        .facebook .social-icon {
+            background: #1877f2;
+        }
+
+        .telegram .social-icon {
+            background: #229ed9;
+        }
+
+        .linkedin .social-icon {
+            background: #0a66c2;
+        }
+
+        .tiktok .social-icon {
+            background: #111;
+        }
+
+        /* =========================
+           BOTTOM CTA
+        ========================= */
+
+        .cta {
+            width: min(1000px, 90%);
+            margin: 0 auto 100px;
+
+            padding: 65px 30px;
+            text-align: center;
+
+            border-radius: 35px;
+
+            background: #171717;
+            color: white;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: "";
+            position: absolute;
+
+            width: 300px;
+            height: 300px;
+
+            border-radius: 50%;
+
+            background: rgba(230, 57, 70, 0.25);
+
+            top: -150px;
+            left: -100px;
+        }
+
+        .cta h2 {
+            position: relative;
+            font-family: "Playfair Display", serif;
+            font-size: clamp(30px, 5vw, 50px);
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            position: relative;
+            color: #bbb;
+            max-width: 550px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 7%;
+            border-top: 1px solid rgba(0, 0, 0, 0.07);
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: #777;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: #171717;
+        }
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        .social-card {
+            opacity: 0;
+            transform: translateY(35px);
+            animation: cardReveal 0.8s ease forwards;
+        }
+
+        .social-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .social-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .social-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .social-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .social-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .social-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes cardReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .social-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                padding-top: 70px;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .back-home {
+                padding: 8px 15px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 70px 20px 45px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .social-container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+
+            .social-card {
+                min-height: 210px;
+            }
+
+            .cta {
+                padding: 50px 25px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <a href="index.html" class="logo">
+            Unfiltered <span>Dreams</span>
+        </a>
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back Home
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="small-title">
+            CONNECT WITH US
+        </div>
+
+        <h1>
+            Find Us <span>Everywhere.</span>
+        </h1>
+
+        <p>
+            Follow Life Unfiltered Dreams across our social platforms.
+            Discover real stories, real people, real journeys
+            and everything happening behind the scenes.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         SOCIAL MEDIA
+    ========================= -->
+
+    <main class="social-container">
+
+
+        <!-- INSTAGRAM -->
+
+        <a href="https://instagram.com/YOUR_USERNAME"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-card instagram">
+
+            <div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <h2>Instagram</h2>
+
+                <p>
+                    Stories, moments, behind the scenes
+                    and daily updates.
+                </p>
+            </div>
+
+            <div class="follow-btn">
+                Follow on Instagram
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
+
+
+        <!-- YOUTUBE -->
+
+        <a href="https://youtube.com/@YOUR_CHANNEL"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-card youtube">
+
+            <div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+
+                <h2>YouTube</h2>
+
+                <p>
+                    Watch real people share their
+                    stories in their own voice.
+                </p>
+            </div>
+
+            <div class="follow-btn">
+                Watch on YouTube
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+
+        <a href="https://facebook.com/YOUR_PAGE"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-card facebook">
+
+            <div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+
+                <h2>Facebook</h2>
+
+                <p>
+                    Stay connected with Life Unfiltered Dreams
+                    and our latest updates.
+                </p>
+            </div>
+
+            <div class="follow-btn">
+                Follow on Facebook
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
+
+
+        <!-- TELEGRAM -->
+
+        <a href="https://t.me/YOUR_USERNAME"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-card telegram">
+
+            <div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-telegram"></i>
+                </div>
+
+                <h2>Telegram</h2>
+
+                <p>
+                    Join our community and receive
+                    important updates directly.
+                </p>
+            </div>
+
+            <div class="follow-btn">
+                Join Telegram
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
+
+
+        <!-- LINKEDIN -->
+
+        <a href="https://linkedin.com/company/YOUR_COMPANY"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-card linkedin">
+
+            <div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+
+                <h2>LinkedIn</h2>
+
+                <p>
+                    Follow our professional journey,
+                    stories and collaborations.
+                </p>
+            </div>
+
+            <div class="follow-btn">
+                Connect on LinkedIn
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
+
+
+        <!-- TIKTOK -->
+
+        <a href="https://tiktok.com/@YOUR_USERNAME"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="social-card tiktok">
+
+            <div>
+                <div class="social-icon">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+
+                <h2>TikTok</h2>
+
+                <p>
+                    Short stories, moments and
+                    unforgettable experiences.
+                </p>
+            </div>
+
+            <div class="follow-btn">
+                Follow on TikTok
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
+
+    </main>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+        <h2>
+            Real Stories. Real People.
+        </h2>
+
+        <p>
+            Life Unfiltered Dreams is about the stories behind the success,
+            the struggles behind the journey and the people who
+            keep moving forward.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div>
+            © 2026 <strong> Unfiltered Dreams. all rights reserved</strong>
+        </div>
+
+        <div>
+            Real stories. Real people. Real journeys.
+        </div>
+
+    </footer>
+
+
+</body>
+</html>
+
+

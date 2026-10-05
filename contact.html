@@ -1,0 +1,1775 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Contact Life Unfiltered — Connect with us, share your story, or get in touch with our team.">
+
+    <title>Contact | Unfiltered Dreams</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #fffaf5;
+            color: #171717;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ::selection {
+            background: #f54d99;
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .lu-header {
+            width: 100%;
+            position: fixed;
+            z-index: 1000;
+           background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(30, 30, 30, 0.08);
+        }
+
+        .lu-nav {
+            width: min(1180px, 92%);
+            min-height: 82px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: black;
+        }
+
+        .lu-logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            font-family: "Manrope", sans-serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: #f62d92;
+            letter-spacing: -0.8px;
+        }
+
+        .lu-logo-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 13px;
+
+            display: grid;
+            place-items: center;
+
+            background: linear-gradient(135deg, #f649b1, #ffb347);
+            color: #ffffff;
+
+            font-size: 20px;
+            box-shadow: 0 8px 22px rgba(255, 112, 67, 0.25);
+        }
+
+        .lu-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgb(243, 242, 242);
+        }
+
+        .lu-menu a,
+        .lu-about-btn {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+
+            padding: 11px 14px;
+            border-radius: 12px;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+
+            color: #070707;
+            transition: 0.3s ease;
+        }
+
+        .lu-menu a:hover,
+        .lu-about-btn:hover {
+            color: #141313;
+            background: #f1f0f0;
+        }
+
+        .lu-menu a.active {
+            color: #fb5092;
+            background: #f3c5c5;
+        }
+
+        .lu-about {
+            position: relative;
+            color: rgb(251, 248, 248);
+        }
+
+        .lu-about-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: rgb(11, 11, 11);
+        }
+
+        .lu-dropdown {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+
+            min-width: 205px;
+            padding: 9px;
+
+            background: #fbfafa;
+            border: 1px solid rgba(245, 243, 243, 0.996);
+            border-radius: 18px;
+
+            box-shadow: 0 18px 50px rgba(6, 6, 6, 0.992);
+
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+
+            /* transition: 0.3s ease; */
+        }
+
+        .lu-about:hover .lu-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            color: rgb(246, 246, 246);
+        }
+
+        .lu-dropdown a {
+            display: block;
+            width: 100%;
+            color:rgb(9, 8, 8);
+        }
+
+        .lu-mobile-btn {
+            display: none;
+
+            width: 44px;
+            height: 44px;
+
+            border: 0;
+            border-radius: 12px;
+
+            background: #f6f4f4;
+            color: #020202;
+
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .contact-hero {
+            position: relative;
+            min-height: 520px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 90px 0 100px;
+
+            overflow: hidden;
+        }
+
+        .hero-container {
+            width: min(1180px, 92%);
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 70px;
+            align-items: center;
+
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 9px 15px;
+            margin-bottom: 22px;
+
+            border-radius: 50px;
+            background: #fff0e8;
+            color: #f748ab;
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        .hero-small span {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #f548b0;
+
+            animation: pulse 1.7s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 112, 67, 0.45);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 112, 67, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 112, 67, 0);
+            }
+        }
+
+        .hero-title {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            font-weight: 800;
+
+            color: #202020;
+        }
+
+        .hero-title .highlight {
+            color: #f62d92;
+        }
+
+        .hero-text {
+            max-width: 570px;
+            margin-top: 25px;
+
+            color: #666666;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .hero-right {
+            position: relative;
+            min-height: 360px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-circle {
+            width: 310px;
+            height: 310px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle at 30% 30%, #ffd8bd, transparent 38%),
+                linear-gradient(145deg, #f8419f, #ffb347);
+
+            position: relative;
+
+            animation: floating 5s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(3deg);
+            }
+        }
+
+        .hero-circle::before {
+            content: "";
+            position: absolute;
+            inset: 24px;
+
+            border: 1px solid rgba(255, 255, 255, 0.65);
+            border-radius: 50%;
+        }
+
+        .hero-message {
+            position: absolute;
+
+            padding: 22px 25px;
+
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.94);
+
+            box-shadow: 0 25px 55px rgba(41, 29, 21, 0.14);
+
+            font-family: "Manrope", sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+
+            color: #202020;
+
+            transform: rotate(-5deg);
+        }
+
+        .hero-message i {
+            display: block;
+            margin-bottom: 8px;
+
+            color: #fa5273;
+            font-size: 25px;
+        }
+
+        .floating-dot {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .dot-one {
+            width: 24px;
+            height: 24px;
+            background: #f650a5;
+            top: 20px;
+            right: 18%;
+        }
+
+        .dot-two {
+            width: 14px;
+            height: 14px;
+            background: #ffb347;
+            bottom: 35px;
+            left: 15%;
+        }
+
+        .dot-three {
+            width: 34px;
+            height: 34px;
+            border: 7px solid #ffd0b7;
+            right: 8%;
+            bottom: 55px;
+        }
+
+
+        /* =====================================================
+           CONTACT SECTION
+        ===================================================== */
+
+        .contact-section {
+            padding: 100px 0;
+            background: #ffffff;
+        }
+
+        .contact-container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 55px;
+        }
+
+        .section-label {
+            color: #f74aba;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-family: "Manrope", sans-serif;
+            font-size: clamp(35px, 5vw, 58px);
+            line-height: 1.05;
+            letter-spacing: -2.5px;
+            color: #202020;
+        }
+
+        .section-heading p {
+            margin-top: 18px;
+            color: #777777;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 30px;
+        }
+
+
+        /* =====================================================
+           CONTACT CARDS
+        ===================================================== */
+
+        .contact-info {
+            display: grid;
+            gap: 18px;
+        }
+
+        .contact-card {
+            padding: 25px;
+
+            background: #fffaf5;
+            border: 1px solid #f2e6dc;
+            border-radius: 22px;
+
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            transition: 0.35s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffc5a8;
+            box-shadow: 0 18px 45px rgba(70, 45, 30, 0.08);
+        }
+
+        .contact-icon {
+            min-width: 55px;
+            width: 55px;
+            height: 55px;
+
+            border-radius: 16px;
+
+            display: grid;
+            place-items: center;
+
+            background: #ffe8db;
+            color: #f838ab;
+
+            font-size: 23px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 5px;
+
+            font-family: "Manrope", sans-serif;
+            font-size: 17px;
+            color: #252525;
+        }
+
+        .contact-card p {
+            color: #777777;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .contact-card a {
+            color: #555555;
+            transition: 0.3s;
+        }
+
+        .contact-card a:hover {
+            color: #f93aa9;
+        }
+
+
+        /* =====================================================
+           FORM
+        ===================================================== */
+
+        .contact-form-box {
+            padding: 38px;
+
+            background: #fffaf5;
+            border: 1px solid #f0e2d7;
+            border-radius: 28px;
+
+            box-shadow: 0 20px 60px rgba(62, 44, 31, 0.06);
+        }
+
+        .contact-form-box h3 {
+            font-family: "Manrope", sans-serif;
+            font-size: 27px;
+            color: #202020;
+            margin-bottom: 7px;
+        }
+
+        .contact-form-box > p {
+            color: #777777;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 27px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 17px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+
+            color: #444444;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .form-control {
+            width: 100%;
+
+            padding: 15px 16px;
+
+            border: 1px solid #eadbd0;
+            border-radius: 13px;
+
+            background: #ffffff;
+
+            color: #222222;
+            font-family: "DM Sans", sans-serif;
+            font-size: 14px;
+
+            outline: none;
+
+            transition: 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #f059a5;
+            box-shadow: 0 0 0 4px rgba(255, 112, 67, 0.09);
+        }
+
+        textarea.form-control {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+
+            border: 0;
+            border-radius: 14px;
+
+            padding: 16px 20px;
+
+            background: linear-gradient(135deg, #f834a0, #ff944d);
+            color: #ffffff;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow: 0 12px 25px rgba(255, 112, 67, 0.22);
+
+            transition: 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 17px 30px rgba(255, 112, 67, 0.28);
+        }
+
+        .submit-btn i {
+            margin-left: 8px;
+        }
+
+
+        /* =====================================================
+           WHATSAPP / EMAIL CTA
+        ===================================================== */
+
+        .quick-contact {
+            margin-top: 80px;
+
+            padding: 50px;
+
+            border-radius: 30px;
+
+            background:
+                radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.5), transparent 25%),
+                linear-gradient(135deg, #fff0e6, #fff8ef);
+
+            border: 1px solid #f3dfd0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .quick-contact h3 {
+            font-family: "Manrope", sans-serif;
+            color: #202020;
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .quick-contact p {
+            color: #777777;
+            line-height: 1.6;
+        }
+
+        .quick-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .quick-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            padding: 14px 20px;
+
+            border-radius: 13px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.3s ease;
+        }
+
+        .quick-btn.whatsapp {
+            background: #25d366;
+            color: #ffffff;
+        }
+
+        .quick-btn.email {
+            background: #ffffff;
+            color: #fc4daa;
+            border: 1px solid #ffd0bd;
+        }
+
+        .quick-btn:hover {
+            transform: translateY(-3px);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .lu-footer {
+            background: #fff3ea;
+            border-top: 1px solid #f1ded0;
+            padding: 65px 0 25px;
+        }
+
+        .footer-container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 45px;
+        }
+
+        .footer-brand p {
+            max-width: 320px;
+            margin-top: 17px;
+
+            color: #777777;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-title {
+            color: #202020;
+            font-size: 14px;
+            font-weight: 800;
+            margin-bottom: 17px;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #777777;
+            font-size: 14px;
+            transition: 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ef41ac;
+            transform: translateX(3px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 9px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 11px;
+
+            background: #ffffff;
+            border: 1px solid #ead9cc;
+
+            color: #555555;
+
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            background: #ff7043;
+            border-color: #ff7043;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            margin-top: 50px;
+            padding-top: 22px;
+
+            border-top: 1px solid #eadbd0;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            color: #888888;
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           SCROLL ANIMATION
+        ===================================================== */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .lu-menu {
+                position: absolute;
+                top: 82px;
+                left: 4%;
+
+                width: 92%;
+
+                padding: 15px;
+
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+
+                background: #ffffff;
+
+                border: 1px solid #eadfd8;
+                border-radius: 18px;
+
+                box-shadow: 0 20px 45px rgba(40, 30, 20, 0.12);
+            }
+
+            .lu-menu.active {
+                display: flex;
+            }
+
+            .lu-menu a,
+            .lu-about-btn {
+                width: 100%;
+                text-align: left;
+            }
+
+            .lu-mobile-btn {
+                display: grid;
+                place-items: center;
+            }
+
+            .lu-about:hover .lu-dropdown {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(8px);
+            }
+
+            .lu-about.open .lu-dropdown {
+                position: static;
+
+                margin-top: 5px;
+
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+
+                box-shadow: none;
+                border: 0;
+
+                background: #fffaf5;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-right {
+                min-height: 300px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-contact {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .lu-nav {
+                min-height: 72px;
+            }
+
+            .lu-menu {
+                top: 72px;
+            }
+
+            .contact-hero {
+                padding: 70px 0;
+            }
+
+            .hero-title {
+                letter-spacing: -2.5px;
+            }
+
+            .hero-circle {
+                width: 245px;
+                height: 245px;
+            }
+
+            .hero-message {
+                font-size: 16px;
+                padding: 17px 19px;
+            }
+
+            .contact-section {
+                padding: 70px 0;
+            }
+
+            .contact-form-box {
+                padding: 25px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .quick-contact {
+                padding: 30px 24px;
+            }
+
+            .quick-contact h3 {
+                font-size: 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="lu-header">
+
+        <nav class="lu-nav">
+
+            <a href="index.html" class="lu-logo">
+
+                <span class="lu-logo-mark">
+                    U
+                </span>
+
+                 nfiltered Dreams
+
+            </a>
+
+
+            <button class="lu-mobile-btn" id="mobileMenuBtn" aria-label="Open Menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+
+            <div class="lu-menu" id="luMenu">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="stories.html">
+                    Stories
+                </a>
+
+                <a href="you_tube.html">
+                    YouTube
+                </a>
+
+                <a href="instgram.html">
+                    Instagram
+                </a>
+                <a href="contact.html" class="active">Contact</a>
+
+                <div class="lu-about" id="aboutMenu">
+
+                    <button class="lu-about-btn">
+                        About Us
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+
+                    <div class="lu-dropdown">
+
+                        <a href="social_media.html">
+                            Follow Us
+                        </a>
+
+                        <a href="company.html">
+                            Company
+                        </a>
+
+                        <a href="terms.html">
+                            Terms
+                        </a>
+
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>
+
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="contact-hero">
+
+        <span class="floating-dot dot-one"></span>
+        <span class="floating-dot dot-two"></span>
+        <span class="floating-dot dot-three"></span>
+
+
+        <div class="hero-container">
+
+            <div class="hero-content reveal">
+
+                <div class="hero-small">
+                    <span></span>
+                    Let's Connect
+                </div>
+
+                <h1 class="hero-title">
+                    Your story
+                    <br>
+                    <span class="highlight">starts here.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Have a question, an idea, or a story you want to share?
+                    We'd love to hear from you. Reach out and become part
+                    of the Life Unfiltered Dreams journey.
+                </p>
+
+            </div>
+
+
+            <div class="hero-right reveal">
+
+                <div class="hero-circle"></div>
+
+                <div class="hero-message">
+
+                    <i class="bi bi-chat-heart-fill"></i>
+
+                    Let's talk.
+                    <br>
+                    Let's connect.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+
+            <div class="section-heading reveal">
+
+                <div class="section-label">
+                    GET IN TOUCH
+                </div>
+
+                <h2>
+                    We'd love to
+                    hear from you.
+                </h2>
+
+                <p>
+                    Whether you have a question, want to collaborate,
+                    or simply want to share something meaningful,
+                    send us a message.
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-grid">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="contact-info reveal">
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-heart"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Email
+                            </h3>
+
+                            <p>
+                                <a href="mailto:hello@lifeunfiltered.com">
+                                    hello@unfilteredDreams.com
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                WhatsApp
+                            </h3>
+
+                            <p>
+                                <a href="https://wa.me/919999999999" target="_blank">
+                                    Chat with us directly
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-camera-video"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Share Your Story
+                            </h3>
+
+                            <p>
+                                Have a journey worth sharing?
+                                We'd love to hear it.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-globe2"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                 Unfiltered Dreams
+                            </h3>
+
+                            <p>
+                                Real stories. Real people. Real journeys.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT FORM -->
+
+                <div class="contact-form-box reveal">
+
+                    <h3>
+                        Send us a message
+                    </h3>
+
+                    <p>
+                        Fill in the details below and we'll get back
+                        to you as soon as possible.
+                    </p>
+
+
+                    <form id="contactForm">
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    class="form-control"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                class="form-control"
+                                placeholder="What would you like to talk about?"
+                                required
+                            >
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Your Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                class="form-control"
+                                placeholder="Write your message here..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <button type="submit" class="submit-btn">
+
+                            Send Message
+
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUICK CONTACT -->
+
+            <div class="quick-contact reveal">
+
+                <div>
+
+                    <h3>
+                        Want to talk directly?
+                    </h3>
+
+                    <p>
+                        You can reach us through WhatsApp or email.
+                    </p>
+
+                </div>
+
+
+                <div class="quick-buttons">
+
+                    <!-- Replace the number with your real WhatsApp number -->
+
+                    <a
+                        href="https://wa.me/9284027564"
+                        target="_blank"
+                        class="quick-btn whatsapp">
+
+                        <i class="bi bi-whatsapp"></i>
+
+                        WhatsApp Us
+
+                    </a>
+
+
+                    <!-- Replace the email with your real email -->
+
+                    <a
+                        href="mailto:hello@lifeunfiltered.com"
+                        class="quick-btn email">
+
+                        <i class="bi bi-envelope"></i>
+
+                        Send Email
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="lu-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="lu-logo">
+
+                        <span class="lu-logo-mark">
+                            U
+                        </span>
+
+                         nfiltered Dreams
+
+                    </a>
+
+                    <p>
+                        Real stories. Real people. Real journeys.
+                        Discover the stories behind the success.
+                    </p>
+
+
+                    <div class="social-links">
+
+                        <a href="instgram.html" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="you_tube.html" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                        <a href="social_media.html" aria-label="social media">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="social_media.html" aria-label="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Explore
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="index.html">
+                            Home
+                        </a>
+
+                        <a href="stories.html">
+                            Stories
+                        </a>
+
+                        <a href="you_tube.html">
+                            YouTube
+                        </a>
+
+                        <a href="instgram.html">
+                            Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <div class="footer-title">
+                        About
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="social_media.html">
+                            Follow Us
+                        </a>
+
+                        <a href="company.html">
+                            Company
+                        </a>
+
+                        <a href="terms.html">
+                            Terms
+                        </a>
+
+                        <a href="privacy.html">
+                            Privacy Policy
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div>
+
+                    <div class="footer-title">
+                        Connect
+                    </div>
+
+                    <div class="footer-links">
+
+                        <a href="mailto:hello@lifeunfiltered.com">
+                            Email
+                        </a>
+
+                        <a href="https://wa.me/919284027564" target="_blank">
+                            WhatsApp
+                        </a>
+
+                        <a href="contact.html">
+                            Contact Us
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-bottom">
+
+                <span>
+                    © 2026  Unfiltered Dreams. All rights reserved.
+                </span>
+
+                <span>
+                    Real stories. No filters.
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* ==============================
+           MOBILE MENU
+        ============================== */
+
+        const mobileMenuBtn =
+            document.getElementById("mobileMenuBtn");
+
+        const luMenu =
+            document.getElementById("luMenu");
+
+        const aboutMenu =
+            document.getElementById("aboutMenu");
+
+        const aboutButton =
+            document.querySelector(".lu-about-btn");
+
+
+        mobileMenuBtn.addEventListener("click", function () {
+
+            luMenu.classList.toggle("active");
+
+            const icon =
+                mobileMenuBtn.querySelector("i");
+
+            if (luMenu.classList.contains("active")) {
+
+                icon.classList.remove("bi-list");
+                icon.classList.add("bi-x-lg");
+
+            } else {
+
+                icon.classList.remove("bi-x-lg");
+                icon.classList.add("bi-list");
+
+            }
+
+        });
+
+
+        /* ==============================
+           MOBILE ABOUT DROPDOWN
+        ============================== */
+
+        aboutButton.addEventListener("click", function (event) {
+
+            if (window.innerWidth <= 900) {
+
+                event.preventDefault();
+
+                aboutMenu.classList.toggle("open");
+
+            }
+
+        });
+
+
+
+        /* ==============================
+           CLOSE MENU WHEN LINK CLICKED
+        ============================== */
+
+        document.querySelectorAll(".lu-menu a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                if (window.innerWidth <= 900) {
+
+                    luMenu.classList.remove("active");
+
+                    aboutMenu.classList.remove("open");
+
+                    const icon =
+                        mobileMenuBtn.querySelector("i");
+
+                    icon.classList.remove("bi-x-lg");
+                    icon.classList.add("bi-list");
+
+                }
+
+            });
+
+        });
+
+
+
+        /* ==============================
+           SCROLL REVEAL
+        ============================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const revealObserver =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("show");
+
+                            revealObserver.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(function (element) {
+
+            revealObserver.observe(element);
+
+        });
+
+
+
+        /* ==============================
+           CONTACT FORM
+        ============================== */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+
+        contactForm.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const subject =
+                document.getElementById("subject").value.trim();
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            if (!name || !email || !subject || !message) {
+
+                alert("Please fill in all the fields.");
+
+                return;
+
+            }
+
+
+            /*
+             * This currently opens the visitor's email app.
+             *
+             * Replace hello@lifeunfiltered.com
+             * with your actual email address.
+             */
+
+            const recipient =
+                "hello@lifeunfiltered.com";
+
+
+            const mailSubject =
+                encodeURIComponent(subject);
+
+            const mailBody =
+                encodeURIComponent(
+                    "Name: " + name +
+                    "\nEmail: " + email +
+                    "\n\nMessage:\n" + message
+                );
+
+
+            window.location.href =
+                "mailto:" +
+                recipient +
+                "?subject=" +
+                mailSubject +
+                "&body=" +
+                mailBody;
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
+
+
